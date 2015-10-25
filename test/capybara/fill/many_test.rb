@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class Capybara::Fill::ManyTest < Minitest::Test
+class Capybara::FillManyTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Capybara::Fill::Many::VERSION
+    refute_nil ::Capybara::FillMany::VERSION
   end
 
   def test_it_does_something_useful

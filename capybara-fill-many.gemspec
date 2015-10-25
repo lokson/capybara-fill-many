@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'capybara/fill/many/version'
+require 'capybara/fill_many/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "capybara-fill-many"
-  spec.version       = Capybara::Fill::Many::VERSION
+  spec.version       = Capybara::FillMany::VERSION
   spec.authors       = ["lokson"]
   spec.email         = ["kapustka.maciek@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Fill_in sequence of fields in capybara.}
+  spec.description   = %q{Fill_in sequence of fields in capybara.}
+  spec.homepage      = "https://github.com/lokson/capybara-fill-many"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

@@ -1,9 +1,30 @@
-# Capybara::Fill::Many
+# Fill Many
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/capybara/fill/many`. To experiment with that code, run `bin/console` for an interactive prompt.
+Fill Many is helper function for capybara tests. If we start with below code:
 
-TODO: Delete this and the text above, and describe your gem
+    attributes = {
+       email: 'test@email.com', 
+       password: 'secret', 
+       password_confirmation: 'secret'
+    }
+    fill_in :user_email, with: attributes[:email]
+    fill_in :user_password, with: attributes[:password]
+    fill_in :user_password_confirmation, with: attributes[:password_confirmation]
 
+Using `fill_many` (that is equivalent of several `fill_in`), we can change it into:
+
+    user = {
+       email: 'test@email.com', 
+       password: 'secret', 
+       password_confirmation: 'secret'
+    }
+    fill_many :user, with: attributes 
+ 
+If data is an active record, name can be derived :
+
+    user = User.first
+    fill_many with: user
+ 
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,9 +41,9 @@ Or install it yourself as:
 
     $ gem install capybara-fill-many
 
-## Usage
-
-TODO: Write usage instructions here
+> ## Usage
+>
+> TODO: Write usage instructions here
 
 ## Development
 
@@ -34,6 +55,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/capybara-fill-many. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
+todo
+(. - most important, ... - less important)
+. write tests
+.. fill checkboxes and select fields if possible
 
 ## License
 
