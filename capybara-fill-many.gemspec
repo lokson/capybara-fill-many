@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kapustka.maciek@gmail.com"]
 
   spec.summary       = %q{Fill_in sequence of fields in capybara.}
-  spec.description   = %q{Fill_in sequence of fields in capybara.}
+  spec.description   = %q{Fill Many is helper function for capybara tests. It replaces several fill_in statements.}
   spec.homepage      = "https://github.com/lokson/capybara-fill-many"
   spec.license       = "MIT"
 

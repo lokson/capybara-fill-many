@@ -41,6 +41,13 @@ Or install it yourself as:
 
     $ gem install capybara-fill-many
 
+Add this line to your Minitest test helper
+
+    class ActiveSupport::TestCase
+    ...
+      include Capybara::FillMany
+    end
+
 > ## Usage
 >
 > TODO: Write usage instructions here
