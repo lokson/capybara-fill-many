@@ -1,29 +1,32 @@
-# Fill Many
+# Fill Many, helper for Capybara tests
 
-Fill Many is helper function for capybara tests. If we start with below code:
+In Capybara it's common to fill a form:
 
-    attributes = {
-       email: 'test@email.com', 
-       password: 'secret', 
-       password_confirmation: 'secret'
-    }
-    fill_in :user_email, with: attributes[:email]
-    fill_in :user_password, with: attributes[:password]
-    fill_in :user_password_confirmation, with: attributes[:password_confirmation]
+```ruby
+attributes = {
+   email: 'test@email.com', 
+   password: 'secret', 
+   password_confirmation: 'secret'
+}
+```
+```ruby
+fill_in :user_email, with: attributes[:email]
+fill_in :user_password, with: attributes[:password]
+fill_in :user_password_confirmation, with: attributes[:password_confirmation]
+```
 
-Using `fill_many` (that is equivalent of several `fill_in`), we can change it into:
+With this helper function, it becomes: 
 
-    user = {
-       email: 'test@email.com', 
-       password: 'secret', 
-       password_confirmation: 'secret'
-    }
-    fill_many :user, with: attributes 
+```ruby
+fill_many :user, with: attributes 
+```
  
-If data is an active record, name can be derived :
+If data is an active record, input name can set using Rails standard naming
 
-    user = User.first
-    fill_many with: user
+```ruby
+user = User.first
+fill_many with: user
+```
  
 ## Installation
 
@@ -41,16 +44,17 @@ Or install it yourself as:
 
     $ gem install capybara-fill-many
 
-Add this line to your Minitest test helper
+Add `require` and `include` to in your Minitest helper
 
-    class ActiveSupport::TestCase
-    ...
-      include Capybara::FillMany
-    end
+```ruby
+require 'capybara/fill_many'
+...
 
-> ## Usage
->
-> TODO: Write usage instructions here
+class ActiveSupport::TestCase
+  ...
+  include Capybara::FillMany
+end
+```
 
 ## Development
 
@@ -60,7 +64,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/capybara-fill-many. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lokson/capybara-fill-many. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
