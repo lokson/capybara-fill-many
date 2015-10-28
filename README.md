@@ -15,7 +15,7 @@ fill_in :user_password, with: attributes[:password]
 fill_in :user_password_confirmation, with: attributes[:password_confirmation]
 ```
 
-With this helper function, it becomes: 
+With this helper function, `fill_in` becomes `fill_many`: 
 
 ```ruby
 fill_many :user, with: attributes 
