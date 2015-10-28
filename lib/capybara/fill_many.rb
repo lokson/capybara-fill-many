@@ -8,6 +8,7 @@ module Capybara
     # fill_many(prefix: 'customer', with: active_record)
     # fill_many(with: active_record)
     def fill_many(*args)
+
       # parameter: active_record 
       if args.size == 1
         options = args.first
