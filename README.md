@@ -14,7 +14,7 @@ With this helper function, series of `fill_in` becomes `fill_many`:
 fill_many :user, with: attributes 
 ```
 
-In above examples, attributes are a hash. Active record can be used too, and in that case `with` option can be skipped, as input names will be set using standard Rails rules.
+In above examples, attributes are a hash. Active record can be used too. In that case location argument (first argument) can be skipped and input names will be set using standard Rails rules.
 
 ```ruby
 fill_many with: user
