@@ -28,15 +28,11 @@ Add this line to your application's Gemfile:
 gem 'capybara-fill-many'
 ```
 
-And then execute:
+Execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install capybara-fill-many
-
-Add `require` and `include` to in your Minitest helper
+And add two lines to test_helper.rb
 
 ```ruby
 require 'capybara/fill_many'
