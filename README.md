@@ -3,13 +3,6 @@
 In Capybara it's common to fill a form:
 
 ```ruby
-attributes = {
-   email: 'test@email.com', 
-   password: 'secret', 
-   password_confirmation: 'secret'
-}
-```
-```ruby
 fill_in :user_email, with: attributes[:email]
 fill_in :user_password, with: attributes[:password]
 fill_in :user_password_confirmation, with: attributes[:password_confirmation]
@@ -20,11 +13,10 @@ With this helper function, series of `fill_in` becomes `fill_many`:
 ```ruby
 fill_many :user, with: attributes 
 ```
- 
-If data is an active record, input name can set using Rails standard naming
+
+In above examples, attributes are hash of values. If test data is in active record, it can be used directly and input names will be evaluated using Rails standard naming
 
 ```ruby
-user = User.first
 fill_many with: user
 ```
  
